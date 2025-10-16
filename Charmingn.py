@@ -1,4 +1,5 @@
 #run program and test
+#Program lvl: EZ
 
 print("AI test 1. type: quiz")
 

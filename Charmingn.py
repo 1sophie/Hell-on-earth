@@ -1,3 +1,5 @@
+#run program and test
+
 print("AI test 1. type: quiz")
 
 score = 0

@@ -2,15 +2,17 @@ public class PlayerController : MonoBehaviour
 {
     private Vector2 direction;
     private float speed = 5f;
-    void Start()
+    private float jumpForce = 8f;
+    private Rigidbody2D rb2d;
+    private void Start()
     {
-        Debug.Log("My name is RoboCode");
+        rb2d = gameObject.GetComponent<Rigidbody2D>();
     }
-    void Update()
+    private void FixedUpdate()
     {
-        direction.x = Input.GetAxis("Horizontal");
-        direction.y = Input.GetAxis("Vertical");
-        transform.Translate(direction * speed * Time.deltaTime);
-        Debug.Log(direction);
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
 }

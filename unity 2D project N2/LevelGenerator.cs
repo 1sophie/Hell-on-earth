@@ -14,4 +14,4 @@ public class PlayerController : MonoBehaviour
      Instantiate(platformPrefab, _spawnPosition,Quaternion.identity);
    }
 }
-}
+} //levels need to be destroyed

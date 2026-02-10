@@ -1,16 +1,25 @@
-//for example this is the most basic code for variables
-//lvl: beginners
-using System;
+using UnityEngine;
 
-namespace MyApplication
+public class SimpleMovement : MonoBehaviour
 {
-  class Program
-  {
-    static void Main(string[] args)
-        {
-      int myNum = 15;
-      myNum = 20;
-      Console.WriteLine(myNum);
+    [SerializeField] private float speed = 5f;
+
+    void Update()
+    {
+        // TODO:
+        // 1. Get input from Horizontal and Vertical axes
+        // 2. Create a movement vector
+        // 3. Move the transform based on that vector * speed * deltaTime
     }
-  }
 }
+
+// void Update()
+//     {
+//         float moveX = Input.GetAxis("Horizontal");
+//         float moveY = Input.GetAxis("Vertical");
+
+//         Vector3 moveDir = new Vector3(moveX, moveY, 0);
+//         transform.Translate(moveDir * speed * Time.deltaTime);
+//     }
+
+
